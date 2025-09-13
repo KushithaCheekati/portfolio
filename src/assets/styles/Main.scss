@@ -1,0 +1,177 @@
+.about-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
+  width: 100%;
+  background: #f6f6f6 url("../images/bg-dark.png") no-repeat center center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.about-section .image-wrapper img 
+{
+  max-width: 100%;   // ✅ make it smaller (adjust % as needed)
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px; // optional if you want softer edges
+}
+
+/* Left Side (Content) */
+.content {
+  flex: 1;
+  padding: 5rem;
+  text-align: left; /* 👈 change to right if you want everything right-aligned */
+  .hero-text p {
+          margin: 0;
+          line-height: 1.2;
+          font-size: 3.5rem;
+          font-weight: 700;
+          color: #333; /* Dark gray for default text */
+        }
+  .hero-text .highlight {
+          color: #6c2bd9; /* Vibrant teal for contrast */
+        }
+  .gradient-text {
+          /* A professional blue-to-violet gradient */
+          background: linear-gradient(90deg, #2563EB, #7C3AED);
+          /* Clip the background to the text */
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          //text-fill-color: transparent;
+          /* Fallback color for older browsers */
+          color: #2563EB;
+        }
+  .social_icons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 1.5rem;
+
+    a {
+      color: #000;
+      transition: all 0.3s ease;
+
+      &:hover {
+        color: #6c2bd9;
+        transform: scale(1.2);
+      }
+
+      svg {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  .mobile_social_icons {
+    display: none;
+  }
+
+}
+       .hero-buttons {
+          margin-top: 2.5rem;
+          display: flex;
+          gap: 1rem;
+        }
+
+        .btn {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          gap: 0.5rem;
+          padding: 0.75rem 1.5rem;
+          font-size: 1rem;
+          font-weight: 600;
+          border-radius: 50px; /* Fully rounded */
+          text-decoration: none;
+          border: 2px solid transparent;
+          transition: all 0.3s ease;
+          cursor: pointer;
+        }
+
+        .btn-outline {
+          color: #333;
+          border-color: #7C3AED;
+        }
+
+        .btn-outline:hover {
+          background: linear-gradient(90deg, #2563EB, #7C3AED);
+          color: #fff;
+          border-color: transparent;
+          transform: translateY(-3px);
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-gradient {
+          background: linear-gradient(90deg, #2563EB, #7C3AED);
+          color: #fff;
+        }
+
+        .btn-gradient:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+        }
+
+
+/* Right Side (Image) */
+.image-wrapper {
+  flex: 1;
+  height: 100vh; /* full height */
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* makes sure image covers full space */
+    border-radius: 0; /* no rounded corners */
+    box-shadow: none;
+    transition: none;
+  }
+}
+
+        /* --- Responsive Design for Mobile --- */
+        @media (max-width: 768px) {
+          .about-section {
+            flex-direction: column;
+            text-align: center;
+          }
+
+          .content {
+            padding: 2rem;
+            text-align: center;
+            order: 2;
+          }
+          
+          .hero-text p {
+            font-size: 2.5rem;
+          }
+
+          .social_icons {
+            display: none;
+          }
+          
+          .hero-buttons {
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+          }
+
+          .btn {
+            width: 80%;
+          }
+
+          .mobile_social_icons {
+            display: flex !important;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 1.5rem;
+          }
+
+          .mobile_social_icons a svg {
+            font-size: 2.5rem;
+          }
+
+          .image-wrapper {
+            width: 100%;
+            height: auto;
+            order: 1;
+          }
+        }

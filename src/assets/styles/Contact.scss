@@ -1,0 +1,99 @@
+.contact_wrapper svg {
+  font-size: 1em;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.contact-form {
+  padding-top: 20px;
+
+  button {
+    float: right;
+    background-color: white;
+    color: #050f0b;
+    border-radius: 6px;
+    padding: 6px 14px;
+    font-weight: 600;
+  }
+
+  button:hover {
+    background-color: #7c3aed;
+    color: white;
+  }
+
+  /* ✅ Fix: fieldset should not block input */
+  fieldset {
+    background-color: transparent !important;
+  }
+
+  /* Inputs & textarea */
+  .MuiOutlinedInput-root input,
+  .MuiOutlinedInput-root textarea {
+    background-color: white;
+    color: #000;
+  }
+
+  .MuiOutlinedInput-root input::placeholder,
+  .MuiOutlinedInput-root textarea::placeholder {
+    color: #666;
+    opacity: 1;
+  }
+}
+
+/* Labels */
+label {
+  font-size: 1.2rem;
+  font-family: 'DomaineDispNar-Medium', sans-serif;
+}
+
+/* Flex layout */
+.form-flex {
+  display: flex;
+  gap: 15px;
+  padding-bottom: 15px;
+}
+
+.form-flex .MuiFormControl-root {
+  width: 100%;
+}
+
+form {
+  width: 100% !important;
+}
+
+.body-form {
+  width: 100% !important;
+  margin-bottom: 15px !important;
+}
+
+/* 🌙 Dark Mode */
+[data-theme="dark"] .contact-form {
+  fieldset {
+    background-color: transparent !important;
+  }
+
+  .MuiOutlinedInput-root input,
+  .MuiOutlinedInput-root textarea {
+    background-color: #1e1e1e;
+    color: #fff;
+  }
+
+  .MuiOutlinedInput-root input::placeholder,
+  .MuiOutlinedInput-root textarea::placeholder {
+    color: #aaa;
+  }
+
+  label {
+    color: #ccc;
+  }
+
+  button {
+    background-color: #fff;
+    color: #050f0b;
+  }
+
+  button:hover {
+    background-color: #7c3aed;
+    color: #fff;
+  }
+}

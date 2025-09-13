@@ -1,0 +1,86 @@
+  .about-page {
+  padding: 60px 5% 50px 5%;  /* top 60px, bottom 40px */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #ffffff;
+  min-height: auto;          /* override if 100vh was set */
+
+
+  /* Default light theme */
+  background: #ffffff;
+  color: #333;
+
+  .section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: inherit;
+  }
+
+  .about-content {
+    max-width: 1000px;
+    text-align: center;
+    line-height: 1.8;
+    font-size: 1.3rem;
+    color: inherit;
+
+    .about-summary {
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+.about-highlight {
+  color: #7c3aed;
+  font-weight: 600;
+}
+
+/* Dark theme override */
+.dark-mode .about-page {
+  background: #111 no-repeat center center;
+  background-size: cover;
+  color: #f6f6f6;
+
+  .section-title,
+  .about-content {
+    color: #f6f6f6;
+  }
+}
+
+/* Optional: Light mode override (explicit, if needed) */
+.light-mode .about-page {
+  background: #ffffff;
+  color: #333;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .about-page {
+    padding: 4rem 1.5rem;
+
+    .section-title {
+      font-size: 2rem;
+    }
+
+    .about-content {
+      font-size: 1rem;
+      text-align: justify;
+    }
+  }
+}
+
+@media screen and (max-width: 567px) {
+  .about-page {
+    padding: 3rem 1rem;
+
+    .section-title {
+      font-size: 1.6rem;
+    }
+
+    .about-content {
+      font-size: 0.95rem;
+    }
+  }
+}
